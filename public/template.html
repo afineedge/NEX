@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, minimal-ui">
+
+<meta property="og:title" content="" />
+<meta property="og:site_name" content="" />
+<meta property="og:image" content="" />
+<meta property="og:description" content="" />
+<meta property="og:url" content="" />
+
+<!-- Update your html tag to include the itemscope and itemtype attributes. -->
+<html itemscope itemtype="http://schema.org/Organization">
+
+<!-- Add the following three tags inside head. -->
+<meta itemprop="name" content="">
+<meta itemprop="description" content="">
+<meta itemprop="image" content="">
+
+<title></title>
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!-- Greensock -->
+<!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/utils/Draggable.min.js"></script>
+<script src="js/ThrowPropsPlugin.min.js"></script>
+<script src="libs/magnific-popup/jquery.magnific-popup.min.js"></script> -->
+<!-- Google Web Fonts -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,800,600' rel='stylesheet' type='text/css'>
+<!-- <link href='libs/magnific-popup/magnific-popup.css' rel='stylesheet' type='text/css'> -->
+<!-- Styles -->
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+	<div id="header">
+		<div class="container">
+		</div>
+	</div>
+	<script>
+	
+		$(document).ready(function(){
+		});
+
+		$(function() {
+		  $('a[href*=#]:not([href=#])').click(function() {
+		    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+		      var target = $(this.hash);
+		      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+		      if (target.length) {
+		        $('html,body').animate({
+		          scrollTop: target.offset().top - ($(window).outerWidth() > 767 ? 88 : 44)
+		        }, {duration:1000, queue: false});
+				$('#navigation').removeClass('active');
+		        return false;
+		      }
+		    }
+		  });
+		});
+
+		window.onload = function(){
+			if(window.location.hash) {
+				var hash = window.location.hash.substring(1);
+				$(window).scrollTop($('#' + hash).position().top - ($(window).outerWidth() > 767 ? 88 : 44));
+			}
+		}
+
+	</script>
+</body>
+</html>
